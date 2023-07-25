@@ -10,6 +10,15 @@ export default function ExpenseForm() {
     const datechange=(event)=>{
          setenterDate(event.target.value);
     }
+    const submitHandler=(event)=>{
+        event.preventDefault();
+        const expenseData={
+         title: title,
+         amount:enteramount,
+         date:new Date(enterDate)
+        };
+        console.log(expenseData);
+    };
 
      const [title,setTitle]=useState("")
      const[enteramount,setenteramount]=useState("")
@@ -18,7 +27,7 @@ export default function ExpenseForm() {
     <form>
         <div>
       <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title</label>&nbsp;&nbsp;
-      <input type='text'onChange={titleChange}/>
+      <input type='text'onChange={titleChange} />
      </div><br/>
      <div>
         <label>Amount</label>&nbsp;&nbsp;
@@ -26,7 +35,7 @@ export default function ExpenseForm() {
      </div><br/>
        <label>Date</label>
        <input type='date' min="2019-01-01" max="2022-12-31" onChange={datechange}/><br/><br></br>
-       <button type="submit">Add Expense</button><hr/>
+       <button type="submit" onClick={submitHandler}>Add Expense</button><hr/>
     </form>
   )
 }
