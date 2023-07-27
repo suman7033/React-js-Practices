@@ -18,11 +18,16 @@ export default function ExpenseForm() {
          date:new Date(enterDate)
         };
         console.log(expenseData);
+        newRec((preExpense)=>[...preExpense,expenseData])
+        setTitle('');
+        setenteramount('');
+        setenterDate('');
     };
 
      const [title,setTitle]=useState("")
      const[enteramount,setenteramount]=useState("")
      const [enterDate,setenterDate]=useState("");
+     const[record,newRec]=useState([]);
   return (
     <form>
         <div>
@@ -36,6 +41,16 @@ export default function ExpenseForm() {
        <label>Date</label>
        <input type='date' min="2019-01-01" max="2022-12-31" onChange={datechange}/><br/><br></br>
        <button type="submit" onClick={submitHandler}>Add Expense</button><hr/>
+      <div>
+        {record.map((record, index) => (
+          <div key={index}>
+            <p>Title: {record.title}</p>
+            <p>Amount: {record.amount}</p>
+            <p>Date: {record.date.toDateString()}</p>
+            <hr />
+          </div>
+        ))}
+      </div>
     </form>
   )
 }
