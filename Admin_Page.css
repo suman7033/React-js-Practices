@@ -1,0 +1,48 @@
+.login-container {
+    width: 300px;
+    background-color: #6ae1df;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(135, 225, 102, 0.1);
+    text-align: center;
+    border: solid #af6969;
+     
+  }
+  
+  /* Apply box shadow to buttons */
+  .button {
+    background-color: #a8653b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+.text1{
+    border-radius: 5px;
+    border: 2px solid #1b83b7;
+    color: rgb(19, 8, 8);
+    font-weight: bold;
+    width: 250px;
+  }
+.text2{
+    border-radius: 5px;
+    border: 2px solid #17739b;
+    color: rgb(19, 8, 8);
+    font-weight: bold;
+    width: 250px;
+}
+.text3{
+    border-radius: 5px;
+    border: 2px solid #4293c5;
+    color: rgb(19, 8, 8);
+    font-weight: bold;
+    width: 250px;
+}
+.text4{
+    border-radius: 5px;
+    color: rgb(19, 8, 8);
+    font-weight: bold;
+    width: 250px;
+}
